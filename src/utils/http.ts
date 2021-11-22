@@ -9,7 +9,7 @@ export const HTTP = {
         url: string,
         params?: Record<string, any>,
         data?: Record<string, any>,
-        headers?: Headers
+        headers?: Headers,
     ): Promise<A> => {
         return new Promise((resolve, reject) => {
             const queryParams = caseParams(params);

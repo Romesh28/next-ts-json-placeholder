@@ -8,8 +8,8 @@ import "@styles/globals.scss"
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <Provider store={store}>
-            <RouteProgress color="blue"/>
-            <Component {...pageProps} />
+            <RouteProgress color="DodgerBlue"/>
+              <Component {...pageProps} />
         </Provider>
     );
 }

@@ -1,5 +1,5 @@
 
-export interface IResponse<T> extends Response {
+/*export interface IResponse<T> extends Response {
     meta: IMeta;
     response: T;
 }
@@ -16,4 +16,4 @@ export interface IPagination {
     lastPage: number;
     from: number;
     to: number;
-}
+}*/
