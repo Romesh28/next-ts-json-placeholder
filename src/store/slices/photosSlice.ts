@@ -28,7 +28,8 @@ const photosSlice = createSlice({
 export const getPhotosFetch = () => async (dispatch: Dispatch) => {
     try {
         dispatch(startPhotosFetching());
-        dispatch(setPhotos(await HTTP.Request('GET', apiRoutes.photos())));
+        const photos:IPhotosDTO[] = await HTTP.Request('GET', apiRoutes.photos())
+        dispatch(setPhotos(photos));
     } catch (e) {
         //
     }

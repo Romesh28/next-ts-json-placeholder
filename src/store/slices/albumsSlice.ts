@@ -28,7 +28,8 @@ const albumsSlice = createSlice({
 export const getAlbumsFetch = () => async (dispatch: Dispatch) => {
     try {
         dispatch(startAlbumsFetching());
-        dispatch(setAlbums(await HTTP.Request('GET', apiRoutes.albums())));
+        const albums:IAlbumsDTO[] = await HTTP.Request('GET', apiRoutes.albums())
+        dispatch(setAlbums(albums));
     } catch (e) {
         //
     }

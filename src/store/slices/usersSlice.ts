@@ -28,7 +28,8 @@ const usersSlice = createSlice({
 export const getUsersFetch = () => async (dispatch: Dispatch) => {
     try {
         dispatch(startUsersFetching());
-        dispatch(setUsers(await HTTP.Request('GET', apiRoutes.users())));
+        const users:IUsersDTO[] = await HTTP.Request('GET', apiRoutes.users())
+        dispatch(setUsers(users));
     } catch (e) {}
 };
 
