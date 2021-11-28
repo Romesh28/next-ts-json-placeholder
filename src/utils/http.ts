@@ -1,4 +1,4 @@
-import { BASE_URL } from '@utils/baseUrl';
+    import { BASE_URL } from '@utils/baseUrl';
 
 const caseParams = (obj: Record<string, any> | undefined) =>
     obj ? '?' + new URLSearchParams(obj) : '';

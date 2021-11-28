@@ -5,7 +5,7 @@ import { apiRoutes } from '@constants';
 import { IPhotosDTO } from '@interfaces';
 import { useAppDispatch, useAppSelector } from '@store';
 import { shallowEqual } from 'react-redux';
-import { useEffect } from 'react';
+import {  useEffect } from 'react';
 import { setPhotos } from '@slices';
 import { ImagePlaceholder } from '@ui-components';
 import { HTTP } from '@utils/http';
@@ -13,6 +13,8 @@ import { HTTP } from '@utils/http';
 interface IProps {
     photos: IPhotosDTO[];
 }
+
+
 
 const Photos: NextPage<IProps> = ({ photos: serverPhotos }) => {
     const dispatch = useAppDispatch();
